@@ -1,0 +1,76 @@
+.achievements {
+  position: relative;
+}
+
+.achieveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.achieveCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.achieveCard:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.achieveIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.achieveIcon.certification {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--accent);
+}
+
+.achieveIcon.hackathon {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+}
+
+.achieveCard:hover .achieveIcon {
+  transform: scale(1.1);
+}
+
+.achieveInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.achieveTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.achieveOrg {
+  font-size: var(--text-xs);
+  color: var(--tertiary);
+}
+
+.achieveYear {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  flex-shrink: 0;
+}

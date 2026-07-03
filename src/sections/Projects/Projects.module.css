@@ -1,0 +1,229 @@
+.projects {
+  position: relative;
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* Featured Project Card */
+.projectCard {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.projectCard:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projectVisual {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.projectGradient {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  transition: opacity var(--duration-slow) var(--ease-out);
+}
+
+.projectCard:hover .projectGradient {
+  opacity: 0.12;
+}
+
+.taglineContainer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.taglineWord {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.taglineWord:nth-child(1) { font-size: var(--text-5xl); }
+.taglineWord:nth-child(2) { font-size: var(--text-4xl); color: var(--secondary); }
+.taglineWord:nth-child(3) { font-size: var(--text-3xl); color: var(--tertiary); }
+
+.projectContent {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--tertiary);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projectTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-1);
+}
+
+.projectSubtitle {
+  font-size: var(--text-sm);
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+}
+
+.projectDescription {
+  font-size: var(--text-sm);
+  color: var(--secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+}
+
+.projectMeta {
+  margin-bottom: var(--space-5);
+}
+
+.metaLabel {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+
+.metricsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.metric {
+  font-size: var(--text-xs);
+  color: var(--secondary);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+}
+
+.projectTech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.techTag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+.projectActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* Non-featured (smaller cards in a grid) */
+.otherProjects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.smallCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.smallCard .projectVisual {
+  min-height: 200px;
+}
+
+.smallCard .taglineWord:nth-child(1) { font-size: var(--text-3xl); }
+.smallCard .taglineWord:nth-child(2) { font-size: var(--text-2xl); }
+.smallCard .taglineWord:nth-child(3) { font-size: var(--text-xl); }
+
+.smallCard .projectContent {
+  padding: var(--space-6);
+}
+
+.smallCard .projectTitle {
+  font-size: var(--text-lg);
+}
+
+@media (max-width: 1024px) {
+  .featured {
+    grid-template-columns: 1fr;
+  }
+
+  .projectVisual {
+    min-height: 280px;
+  }
+
+  .otherProjects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .projectContent {
+    padding: var(--space-6);
+  }
+
+  .taglineWord:nth-child(1) { font-size: var(--text-3xl); }
+  .taglineWord:nth-child(2) { font-size: var(--text-2xl); }
+  .taglineWord:nth-child(3) { font-size: var(--text-xl); }
+}
+
+.tiltFeatured {
+  transform-style: preserve-3d;
+}
+
+.tiltSmall {
+  transform-style: preserve-3d;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}

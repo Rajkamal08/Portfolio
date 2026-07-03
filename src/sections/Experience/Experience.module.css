@@ -1,0 +1,157 @@
+.experience {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+  transform-origin: top;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 56px;
+  padding-bottom: var(--space-12);
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 13px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  z-index: 2;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.timelineItem:hover .timelineDot {
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.timelineCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-8);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.timelineCard:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  transform: translateX(4px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  gap: var(--space-4);
+}
+
+.role {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--space-1);
+}
+
+.company {
+  font-size: var(--text-base);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--tertiary);
+  white-space: nowrap;
+}
+
+.location {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.bulletList {
+  margin-bottom: var(--space-4);
+}
+
+.bullet {
+  position: relative;
+  padding-left: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-2);
+}
+
+.bullet::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: var(--text-sm);
+}
+
+.techChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.techChip {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cardHeader {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .meta {
+    text-align: left;
+  }
+
+  .timelineItem {
+    padding-left: 48px;
+  }
+
+  .timelineCard {
+    padding: var(--space-5) var(--space-6);
+  }
+}
