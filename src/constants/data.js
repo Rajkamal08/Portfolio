@@ -168,7 +168,7 @@ export const projects = [
     year: '2025',
     featured: false,
     color: '#EF4444',
-    image: null,
+    image: '/projects/heart_failure.png',
   },
   {
     id: 'food-delivery',
