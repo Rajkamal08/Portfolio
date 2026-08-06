@@ -2,6 +2,8 @@ import { useEffect, lazy, Suspense, useState } from 'react';
 import Lenis from '@studio-freight/lenis';
 import Navbar from './components/Navbar/Navbar';
 import CursorGlow from './components/CursorGlow/CursorGlow';
+import CustomCursor from './components/CustomCursor/CustomCursor';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 import Footer from './components/Footer/Footer';
 import Preloader from './components/Preloader/Preloader';
 import CommandMenu from './components/CommandMenu/CommandMenu';
@@ -70,11 +72,13 @@ export default function App() {
       
       {!loading && (
         <>
+          <ProgressBar />
           <CommandMenu />
+          <CustomCursor />
           <CursorGlow />
-      <Navbar />
+          <Navbar />
 
-      <main>
+          <main>
         <Hero />
         <Suspense fallback={<SectionLoader />}>
           <About />

@@ -115,6 +115,13 @@ html {
   font-size: 16px;
 }
 
+/* Hide default cursor on desktop devices so our custom one can shine */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 body {
   font-family: var(--font-body);
   font-weight: 400;
