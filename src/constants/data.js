@@ -184,7 +184,7 @@ export const projects = [
     year: '2024',
     featured: false,
     color: '#F97316',
-    image: null,
+    image: '/projects/food_delivery.png',
   },
 ];
 
