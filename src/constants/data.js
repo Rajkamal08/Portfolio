@@ -91,6 +91,22 @@ export const skills = [
 
 export const projects = [
   {
+    id: 'ppg-signal',
+    title: 'PPG Signal Assessment',
+    subtitle: 'Clinical Machine Learning Pipeline',
+    tagline: ['Extract.', 'Filter.', 'Assess.'],
+    description: 'Smartphone-based Photoplethysmography (PPG) signal acquisition, DSP filtering, and quality grading using clinical Machine Learning.',
+    problem: 'Medical-grade cardiovascular monitoring requires expensive, specialized hardware pulse oximeters which are highly inaccessible.',
+    solution: 'Engineered a full-stack system extracting raw optical signals via custom Kotlin bridges, passing them through a Python backend with 4th-order Butterworth filters and a custom Mobile Domain Calibration layer to grade signal quality in real-time.',
+    metrics: ['95% ML Accuracy', 'Real-time DSP', 'Mobile Calibration', 'Kotlin Native Bridge'],
+    tech: ['React Native', 'Kotlin', 'FastAPI', 'Scikit-Learn', 'SciPy', 'Pandas'],
+    github: 'https://github.com/Rajkamal08/PPG-Signal-Quality-Assessment',
+    year: '2026',
+    featured: true,
+    color: '#E11D48',
+    image: '/projects/ppg.png',
+  },
+  {
     id: 'mitticard',
     title: 'MittiCard',
     subtitle: 'AI Soil Health Advisory App',
@@ -104,6 +120,7 @@ export const projects = [
     year: '2026',
     featured: true,
     color: '#22C55E',
+    image: '/projects/mitticard.png',
   },
   {
     id: 'contract-intelligence',
@@ -134,7 +151,7 @@ export const projects = [
     year: '2025',
     featured: true,
     color: '#F59E0B',
-    image: null,
+    image: '/projects/bike_rental.png',
   },
   {
     id: 'heart-failure',
