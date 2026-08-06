@@ -27,6 +27,11 @@ function ProjectCard({ project, isFeatured }) {
       >
         {/* Visual / Tagline Area */}
         <div className={styles.projectVisual}>
+          {/* Animated color orb — always rendered for glow effect */}
+          <div
+            className={styles.colorOrb}
+            style={{ background: project.color }}
+          />
           {project.image ? (
             <img src={project.image} alt={project.title} className={styles.projectImage} loading="lazy" />
           ) : (
