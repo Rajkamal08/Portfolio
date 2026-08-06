@@ -136,6 +136,7 @@ export const projects = [
     year: '2025',
     featured: true,
     color: '#4F46E5',
+    image: '/projects/contract.png',
   },
   {
     id: 'bike-rental',
