@@ -2,7 +2,6 @@ import { useEffect, lazy, Suspense, useState } from 'react';
 import Lenis from '@studio-freight/lenis';
 import Navbar from './components/Navbar/Navbar';
 import CursorGlow from './components/CursorGlow/CursorGlow';
-import CustomCursor from './components/CustomCursor/CustomCursor';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import Footer from './components/Footer/Footer';
 import Preloader from './components/Preloader/Preloader';
@@ -74,7 +73,6 @@ export default function App() {
         <>
           <ProgressBar />
           <CommandMenu />
-          <CustomCursor />
           <CursorGlow />
           <Navbar />
 
