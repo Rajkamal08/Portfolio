@@ -3,7 +3,7 @@
    ============================================ */
 
 export const personalInfo = {
-  name: 'Raj',
+  name: 'Raj Kamal Mehta',
 
   headline: 'Building intelligent mobile experiences with React Native.',
   subheadline: 'React Native Developer • Full Stack Engineer • AI Builder',
@@ -30,29 +30,29 @@ export const experience = [
   {
     id: 'amen',
     role: 'Mobile & Web Development Intern',
-    company: 'AMSN System IT Solution Pvt. Ltd.',
+    company: 'AMSN Syntax IT Solution Pvt. Ltd.',
     location: 'New Delhi, India',
     period: 'Jan 2026 — Apr 2026',
     description: [
-      'Developed cross-platform mobile and web applications using React Native and React.js as part of a team, following component-based architecture and modular design practices.',
-      'Integrated RESTful APIs to enable real-time data synchronization between client interfaces and backend servers, following Agile development workflows.',
+      'Tech stacks used: React Native, React.js, REST APIs',
+      'Engineered responsive web and mobile screen layouts using React.js and React Native, translating design requirements into highly intuitive and user-friendly interfaces.',
       'Diagnosed and resolved critical UI/UX bugs across existing web applications, improving cross-browser compatibility and overall platform stability.',
     ],
-    tech: ['React Native', 'React.js', 'REST APIs', 'Agile'],
+    tech: ['React Native', 'React.js', 'REST APIs'],
   },
   {
     id: 'iiit',
-    role: 'ML & Deep Learning Trainee',
+    role: 'Machine Learning (ML) & Deep Learning Trainee',
     company: 'IIIT Naya Raipur',
     location: 'Raipur, India',
-    period: 'May 2025 — Jul 2025',
+    period: 'July 2025 — Aug 2025',
     description: [
-      'Built a biomedical signal quality assessment system using SVM and Random Forest models on PPG waveform data, achieving 89.7% classification accuracy.',
-      'Designed a feature extraction and preprocessing pipeline from raw PPG signals for real-time inference and signal quality classification.',
-      'Integrated ML model inference into a React Native application with a Flask backend for live smartphone-based signal monitoring.',
+      'Tech stacks used: Python, React Native, FastAPI, Kotlin, Scikit-Learn',
+      'Architected a cardiovascular health application extracting raw PPG optical signals directly from a smartphone camera using custom Kotlin Native hardware bridges.',
+      'Engineered a clinical Machine Learning pipeline applying Butterworth DSP filters and extracting 30+ statistical features to achieve 95% classification accuracy with a Random Forest model deployed on FastAPI.',
       'Co-authored IEEE-supported research on PPG signal quality assessment, published on TechRxiv (2025).',
     ],
-    tech: ['Python', 'SVM', 'Random Forest', 'React Native', 'Flask', 'Signal Processing'],
+    tech: ['Python', 'React Native', 'FastAPI', 'Kotlin', 'Scikit-Learn'],
   },
 ];
 
@@ -255,7 +255,7 @@ export const education = {
   degree: 'B.Tech, Computer Science and Engineering',
   institution: 'Krishna Vikas Institute of Technology, Raipur',
   period: '2022 — 2026',
-  cgpa: '8.1 / 10',
+  cgpa: '8.3 / 10',
 };
 
 export const navItems = [

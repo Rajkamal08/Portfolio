@@ -3,7 +3,7 @@ import { Mail, ArrowDown, Eye, Download, Send } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../../components/Icons';
 import MagneticButton from '../../components/MagneticButton/MagneticButton';
 import { personalInfo } from '../../constants/data';
-import { heroHeadline, heroWord, fadeInUp, fadeIn, staggerContainer, viewportOnce } from '../../animations/variants';
+import { heroHeadline, heroWord, fadeInUp, fadeIn, staggerContainer } from '../../animations/variants';
 import { useMouseParallax } from '../../hooks/useMouseParallax';
 import styles from './Hero.module.css';
 
@@ -144,11 +144,11 @@ export default function Hero() {
                     ].map((item) => (
                       <div key={item.label} style={{
                         flex: 1, textAlign: 'center', padding: '8px 4px',
-                        background: 'rgba(255,255,255,0.04)', borderRadius: '8px',
+                        background: 'var(--overlay-subtle)', borderRadius: '8px',
                       }}>
                         <div style={{ fontSize: '9px', color: item.color, marginBottom: '2px' }}>{item.label}</div>
-                        <div style={{ fontSize: '14px', fontWeight: '600', color: '#fff' }}>{item.value}</div>
-                        <div style={{ fontSize: '8px', color: '#71717a' }}>kg/ha</div>
+                        <div style={{ fontSize: '14px', fontWeight: '600', color: 'var(--primary)' }}>{item.value}</div>
+                        <div style={{ fontSize: '8px', color: 'var(--muted)' }}>kg/ha</div>
                       </div>
                     ))}
                   </div>

@@ -3,7 +3,7 @@ import { BookOpen, ExternalLink, FileText } from 'lucide-react';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import MagneticButton from '../../components/MagneticButton/MagneticButton';
 import { publication } from '../../constants/data';
-import { fadeInUp, scaleIn, viewportOnce } from '../../animations/variants';
+import { scaleIn, viewportOnce } from '../../animations/variants';
 import styles from './Publication.module.css';
 
 export default function Publication() {

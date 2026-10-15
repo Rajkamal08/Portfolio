@@ -75,6 +75,12 @@ export default function CommandMenu() {
                   <Command.Item onSelect={() => runCommand(() => scrollTo('#publication'))}>
                     <FileText /> Research
                   </Command.Item>
+                  <Command.Item onSelect={() => runCommand(() => scrollTo('#achievements'))}>
+                    <Award /> Achievements
+                  </Command.Item>
+                  <Command.Item onSelect={() => runCommand(() => scrollTo('#github'))}>
+                    <BarChart /> Open Source
+                  </Command.Item>
                   <Command.Item onSelect={() => runCommand(() => scrollTo('#contact'))}>
                     <Mail /> Contact
                   </Command.Item>

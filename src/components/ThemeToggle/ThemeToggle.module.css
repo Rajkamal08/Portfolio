@@ -1,0 +1,28 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--overlay-subtle);
+  border: 1px solid var(--border);
+  color: var(--secondary);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-light);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

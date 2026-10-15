@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Download, Command } from 'lucide-react';
 import { navItems, personalInfo } from '../../constants/data';
 import { navVariants } from '../../animations/variants';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -74,6 +75,7 @@ export default function Navbar() {
             <button className={styles.cmdKBtn} onClick={triggerCmdK} aria-label="Open Command Menu">
               <Command size={14} /> <span>⌘K</span>
             </button>
+            <ThemeToggle />
             <a
               href={personalInfo.resumeFile}
               className={styles.resumeBtn}
@@ -111,15 +113,18 @@ export default function Navbar() {
             {item.label}
           </a>
         ))}
-        <a
-          href={personalInfo.resumeFile}
-          className={styles.resumeBtn}
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          <Download /> Resume
-        </a>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
+          <ThemeToggle />
+          <a
+            href={personalInfo.resumeFile}
+            className={styles.resumeBtn}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <Download /> Resume
+          </a>
+        </div>
       </div>
     </>
   );

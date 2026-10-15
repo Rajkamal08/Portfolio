@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import { personalInfo, stats, education } from '../../constants/data';
-import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, viewportOnce } from '../../animations/variants';
+import { fadeInUp, fadeInLeft, staggerContainer, viewportOnce } from '../../animations/variants';
 import styles from './About.module.css';
 
 export default function About() {
