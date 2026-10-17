@@ -24,7 +24,10 @@ export default function Preloader({ onComplete }) {
     };
   }, [onComplete]);
 
-  const chars = personalInfo.name.split('');
+  const fullName = personalInfo.fullName || 'Raj Kamal Mehta';
+  const words = fullName.split(' ');
+
+  let charCounter = 0;
 
   return (
     <AnimatePresence>
@@ -34,20 +37,28 @@ export default function Preloader({ onComplete }) {
           exit={{ y: '-100%', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
         >
           <div className={styles.logo}>
-            {chars.map((char, i) => (
-              <motion.span
-                key={i}
-                className={styles.char}
-                initial={{ y: '100%' }}
-                animate={{ y: '0%' }}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.76, 0, 0.24, 1],
-                  delay: i * 0.1,
-                }}
-              >
-                {char}
-              </motion.span>
+            {words.map((word, wIdx) => (
+              <span key={wIdx} className={styles.word}>
+                {word.split('').map((char, cIdx) => {
+                  const currentDelay = charCounter * 0.07;
+                  charCounter++;
+                  return (
+                    <motion.span
+                      key={cIdx}
+                      className={styles.char}
+                      initial={{ y: '100%' }}
+                      animate={{ y: '0%' }}
+                      transition={{
+                        duration: 0.8,
+                        ease: [0.76, 0, 0.24, 1],
+                        delay: currentDelay,
+                      }}
+                    >
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </span>
             ))}
             <motion.span
               className={`${styles.char} ${styles.dot}`}
@@ -56,7 +67,7 @@ export default function Preloader({ onComplete }) {
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
-                delay: chars.length * 0.1 + 0.2,
+                delay: charCounter * 0.07 + 0.15,
               }}
             >
               .

@@ -3,7 +3,8 @@
    ============================================ */
 
 export const personalInfo = {
-  name: 'Raj Kamal Mehta',
+  name: 'Raj',
+  fullName: 'Raj Kamal Mehta',
 
   headline: 'Building intelligent mobile experiences with React Native.',
   subheadline: 'React Native Developer • Full Stack Engineer • AI Builder',

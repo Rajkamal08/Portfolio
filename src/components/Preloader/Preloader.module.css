@@ -19,6 +19,15 @@
   padding-bottom: var(--space-2);
 }
 
+.word {
+  display: inline-flex;
+  margin-right: 0.38em;
+}
+
+.word:last-of-type {
+  margin-right: 0;
+}
+
 .char {
   display: inline-block;
 }
