@@ -1,0 +1,186 @@
+%-------------------------
+% Serif ATS-Optimized Resume
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5} % Used for the icons in the header
+\input{glyphtounicode}
+
+% Set font to Times New Roman (Serif)
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins - ULTRA SQUEEZED
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{1.7in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting (Small Caps, Left Aligned, Line Underneath)
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% 2-argument subheading for Experience
+\newcommand{\resumeSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% 4-argument subheading for Education
+\newcommand{\resumeEduHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{Raj Kamal Mehta}} \\ \vspace{8pt}
+    \small 
+    \faGithub \hspace{2pt} \href{https://github.com/Rajkamal08}{\underline{Rajkamal08}} $|$ 
+    \faMapMarker \hspace{2pt} {\underline{Raipur, India }}$|$ 
+    \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/raj-kamal-mehta-105320269}{\underline{raj-kamal-mehta}} $|$ 
+    \faEnvelope \hspace{2pt} \href{mailto:cheerychuckle07@gmail.com}{\underline{cheerychuckle07@gmail.com}} $|$ 
+    \faPhone \hspace{2pt} +91-7632913157
+\end{center}
+\vspace{2pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AMSN Syntax IT Solution Pvt. Ltd. $|$ \normalfont\textit{Mobile \& Web Development Intern}}{Jan 2026 -- Apr 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Tech stacks used:} React Native, React.js, REST APIs}
+        \resumeItem{\textbf{Frontend Architecture:} Engineered high-performance, cross-platform architectures using React.js and React Native, translating complex design requirements into seamless user interfaces.}
+        \resumeItem{\textbf{UI/UX Optimization:} Debugged and resolved critical layout inconsistencies, significantly improving cross-browser compatibility and elevating overall platform stability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+       {IIIT Naya Raipur $|$ \normalfont\textit{Machine Learning (ML) \& Deep Learning Trainee}}{July 2025 -- Aug 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Tech stacks used:} Python, React Native, FastAPI, Kotlin, Scikit-Learn}
+        \resumeItem{\textbf{Full-Stack Architecture:} Architected a cardiovascular health application extracting raw PPG optical signals directly from a smartphone camera using custom Kotlin Native hardware bridges.}
+        \resumeItem{\textbf{Clinical ML Pipeline:} Built a DSP-filtered Random Forest model using 30+ extracted features, achieving \textbf{95\% accuracy} deployed via FastAPI.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{MittiCard -- Soil Health App} $|$ \emph{React Native, PostgreSQL, Groq Vision} $|$ (\href{https://github.com/Rajkamal08/MittiCard}{\underline{GitHub}})}{Feb 2026 -- Apr 2026}
+          \resumeItemListStart
+            \resumeItem{Developed an AI-powered mobile app that scans ICAR Soil Health Cards using Groq Vision OCR and delivers crop-specific fertilizer recommendations with cost estimates in Hindi and English.}
+            \resumeItem{Engineered an advisory system for 7 crops with NPK deficiency detection and soil health scoring (0--100), supported by a Node.js/Express and PostgreSQL backend with OTP authentication and Firebase push notifications.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Bike Rental App -- Booking Platform} $|$ \emph{React Native, Node.js, MongoDB, Stripe} $|$ (\href{https://github.com/Rajkamal08/bike}{\underline{GitHub}})}{Dec 2025 -- Jan 2026}
+          \resumeItemListStart
+            \resumeItem{Architected a cross-platform mobile application supporting end-to-end booking workflows, secure Stripe payments, and automated KYC via REST APIs.}
+            \resumeItem{Designed a scalable Node.js backend with JWT authentication and optimized MongoDB schemas, reducing query response time by \textbf{30\%} under concurrent load.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{PPG Signal Quality Assessment} $|$ \emph{React Native, FastAPI, Scikit-Learn, Kotlin} $|$ (\href{https://github.com/Rajkamal08/PPG-Signal-Quality-Assessment}{\underline{GitHub}})}{July 2025 -- Aug 2025}
+          \resumeItemListStart
+            \resumeItem{Architected a full-stack cardiovascular health application that extracts raw PPG optical signals directly from a smartphone camera using custom Kotlin Native hardware bridges.}
+            \resumeItem{Engineered a clinical Machine Learning pipeline applying Butterworth DSP filters and extracting 30+ statistical features to achieve \textbf{95\% classification accuracy} with a Random Forest model deployed on FastAPI.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEduHeading
+      {Krishna Vikas Institute of Technology , Raipur}{2022 -- 2026}
+      {B.Tech, Computer Science and Engineering}{CGPA: 8.3/10}
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \begin{tabular}{@{}l @{\hspace{0.2in}} l}
+       \textbf{Languages}  & JavaScript, TypeScript, Python, C \\
+       \textbf{Frontend}   & React.js, Redux, HTML5, CSS3, Tailwind CSS \\
+       \textbf{Backend}    & Node.js, Express.js, REST APIs, JWT Authentication \\
+       \textbf{Mobile Dev} & React Native (CLI, Expo) \\
+       \textbf{Databases}  & MongoDB, PostgreSQL, MySQL \\
+       \textbf{Tools}      & Git, GitHub, Docker, CI/CD, Postman, Firebase, VS Code \\
+     \end{tabular}
+    }}
+ \end{itemize}
+
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=-2pt]
+    \small{
+      \item \textbf{Publication:} Raj Kamal Mehta et al., ``\textbf{PPG Signal Quality Assessment \& Artifact Detection for Smartphone Monitoring},'' \textit{TechRxiv (IEEE-supported preprint)}, 2025.
+      \item \textbf{Certificate:} Artificial Intelligence \& Machine Learning Training, \textit{Infosys Springboard} (2024)
+      \item \textbf{Certificate:} Job-Ready MERN Full-Stack Web Development, \textit{30 Days Coding} (Nov 2024)
+      \item \textbf{Hackathon Finalist:} IDEA-FIESTA Hackathon (2022)
+    }
+  \end{itemize}
+
+\end{document}
