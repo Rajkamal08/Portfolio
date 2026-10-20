@@ -26,12 +26,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins - Balanced ATS 1-page layout
+% Adjust margins - ATS 1-page optimized
 \addtolength{\oddsidemargin}{-0.55in}
 \addtolength{\evensidemargin}{-0.55in}
 \addtolength{\textwidth}{1.1in}
-\addtolength{\topmargin}{-0.75in}
-\addtolength{\textheight}{1.55in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.75in}
 
 \urlstyle{same}
 \raggedbottom
@@ -40,8 +40,8 @@
 
 % Sections formatting (Small Caps, Left Aligned, Line Underneath)
 \titleformat{\section}{
-  \vspace{1pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+  \vspace{-1pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
 \pdfgentounicode=1
 
@@ -49,40 +49,40 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-0.5pt}}
+    {#1 \vspace{-2pt}}
   }
 }
 
 % 2-argument subheading for Experience
 \newcommand{\resumeSubheading}[2]{
-  \vspace{0pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 % 4-argument subheading for Education
 \newcommand{\resumeEduHeading}[4]{
-  \vspace{0pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-2pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \vspace{0pt}\item
+    \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 \begin{document}
@@ -174,7 +174,7 @@
 
 %-----------ACHIEVEMENTS-----------
 \section{Achievements}
-  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0.5pt]
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=-0.5pt]
     \small{
       \item \textbf{Publication:} Raj Kamal Mehta et al., ``\textbf{PPG Signal Quality Assessment \& Artifact Detection for Smartphone Monitoring},'' \textit{TechRxiv (IEEE-supported preprint)}, 2025.
       \item \textbf{Certificate:} Artificial Intelligence \& Machine Learning Training, \textit{Infosys Springboard} (2024)
