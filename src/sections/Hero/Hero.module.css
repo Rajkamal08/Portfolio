@@ -121,7 +121,7 @@
   perspective: 1200px;
 }
 
-/* Floating Glass Badges (Concept 3 touches) */
+/* Subtle floating badge (Concept 3 touch - top only) */
 .floatingBadge {
   position: absolute;
   z-index: 10;
@@ -143,35 +143,20 @@
 }
 
 .badgeTopLeft {
-  top: 18px;
-  left: -32px;
+  top: 14px;
+  left: -28px;
   animation: float 5s ease-in-out infinite;
-}
-
-.badgeBottomRight {
-  bottom: 64px;
-  right: -28px;
-  animation: float 6s ease-in-out infinite 1s;
 }
 
 .badgeIcon {
   color: var(--accent);
 }
 
-.badgePulseDot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #22C55E;
-  box-shadow: 0 0 8px #22C55E;
-  animation: pulse-soft 2s infinite;
-}
-
 /* Phone Device Frame */
 .phone {
   position: relative;
-  width: 285px;
-  height: 560px;
+  width: 290px;
+  height: 580px;
   background: #080d1a;
   border-radius: 40px;
   border: 2px solid rgba(255, 255, 255, 0.12);
@@ -219,7 +204,7 @@
 
 /* Phone Status Bar */
 .phoneStatusBar {
-  height: 34px;
+  height: 32px;
   width: 100%;
   padding: 8px 18px 0;
   display: flex;
@@ -273,7 +258,7 @@
   overflow-x: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 6px 14px 10px;
+  padding: 4px 14px 8px;
   display: flex;
   flex-direction: column;
 }
@@ -292,14 +277,15 @@
 /* TAB 1: Developer Profile Styling */
 .avatarContainer {
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 108px;
+  height: 108px;
   margin-top: 2px;
   margin-bottom: 8px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .avatarGlowRing {
@@ -319,7 +305,8 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #070c18;
+  border: 2.5px solid #070c18;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .statusBadge {
@@ -347,7 +334,7 @@
 
 .profileName {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 700;
   color: var(--primary);
   margin: 0 0 2px;
@@ -356,10 +343,10 @@
 }
 
 .profileTitle {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--accent);
-  font-weight: 500;
-  margin: 0 0 3px;
+  font-weight: 600;
+  margin: 0 0 2px;
   text-align: center;
 }
 
@@ -367,9 +354,9 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 9px;
+  font-size: 9.5px;
   color: var(--tertiary);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .profileCard {
@@ -377,8 +364,8 @@
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 8px;
+  padding: 10px 12px;
+  margin-bottom: 7px;
   backdrop-filter: blur(8px);
 }
 
@@ -386,44 +373,30 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.cardHeaderDot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent);
+.cardHeaderIconAccent {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.cardHeaderIconGreen {
+  color: #4ADE80;
+  flex-shrink: 0;
 }
 
 .cardHeaderTitle {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.profileTechGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.techTag {
-  font-size: 8.5px;
-  padding: 3px 7px;
-  border-radius: 6px;
-  background: rgba(79, 70, 229, 0.12);
-  color: #C7D2FE;
-  border: 1px solid rgba(79, 70, 229, 0.25);
-  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .cardText {
-  font-size: 9px;
+  font-size: 9.5px;
   color: var(--secondary);
-  line-height: 1.45;
+  line-height: 1.48;
   margin: 0;
 }
 
@@ -584,14 +557,14 @@
 /* Pinned Bottom Navigation Bar */
 .phoneNavBar {
   width: 100%;
-  height: 50px;
-  background: rgba(8, 14, 26, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  height: 56px;
+  background: rgba(8, 14, 26, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 4px 6px;
+  padding: 5px 6px 12px;
   z-index: 10;
 }
 
@@ -603,11 +576,11 @@
   gap: 2px;
   background: none;
   border: none;
-  padding: 4px 0;
+  padding: 4px 2px;
   border-radius: 8px;
   cursor: pointer;
   color: var(--tertiary);
-  font-size: 8.5px;
+  font-size: 9px;
   font-weight: 500;
   transition: all 0.2s var(--ease-out);
 }
@@ -620,19 +593,19 @@
 .navTabActive {
   color: #818CF8;
   font-weight: 600;
-  background: rgba(79, 70, 229, 0.15);
+  background: rgba(79, 70, 229, 0.16);
 }
 
 .navTabActiveGreen {
   color: #4ADE80;
   font-weight: 600;
-  background: rgba(34, 197, 94, 0.15);
+  background: rgba(34, 197, 94, 0.16);
 }
 
 .navTabActiveRed {
   color: #FB7185;
   font-weight: 600;
-  background: rgba(244, 63, 94, 0.15);
+  background: rgba(244, 63, 94, 0.16);
 }
 
 /* Floating glow behind phone */
@@ -754,8 +727,8 @@
   }
 
   .phone {
-    width: 275px;
-    height: 540px;
+    width: 285px;
+    height: 570px;
     transform: none !important;
   }
 
@@ -777,8 +750,8 @@
   }
 
   .phone {
-    width: 270px;
-    height: 520px;
+    width: 280px;
+    height: 550px;
     transform: none !important;
   }
 
@@ -798,5 +771,21 @@
   .heroCtas > * {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .phone {
+    width: 260px;
+    height: 520px;
+  }
+
+  .avatarContainer {
+    width: 94px;
+    height: 94px;
+  }
+
+  .cardText {
+    font-size: 8.5px;
   }
 }

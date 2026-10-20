@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, ArrowDown, Eye, Download, Send, User, Sprout, Activity, Heart, Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
+import { Mail, ArrowDown, Eye, Download, Send, User, Sprout, Activity, Heart, Sparkles, MapPin, CheckCircle2, Smartphone, Award } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../../components/Icons';
 import MagneticButton from '../../components/MagneticButton/MagneticButton';
 import { personalInfo } from '../../constants/data';
@@ -116,14 +116,10 @@ export default function Hero() {
             <div className={`${styles.floatingOrb} ${styles.orb2}`} />
             <div className={`${styles.floatingOrb} ${styles.orb3}`} />
 
-            {/* Subtle floating badges (Concept 3 touches) */}
+            {/* Subtle floating badge (Concept 3 touch - top only, non-competing) */}
             <div className={`${styles.floatingBadge} ${styles.badgeTopLeft}`}>
               <Sparkles size={12} className={styles.badgeIcon} />
               <span>Mobile & Full Stack</span>
-            </div>
-            <div className={`${styles.floatingBadge} ${styles.badgeBottomRight}`}>
-              <span className={styles.badgePulseDot} />
-              <span>Tap Tabs to Explore</span>
             </div>
 
             <div className={styles.phone}>
@@ -154,13 +150,14 @@ export default function Hero() {
                         exit={{ opacity: 0, y: -8 }}
                         transition={{ duration: 0.22 }}
                       >
-                        {/* Profile Avatar with Glowing Ring */}
+                        {/* High-Resolution Profile Avatar (110px) */}
                         <div className={styles.avatarContainer}>
                           <div className={styles.avatarGlowRing} />
                           <img
-                            src="/projects/RAJ_PHOTO.png"
+                            src="/projects/raj_profile_hd.png"
                             alt="Raj Kamal Mehta"
                             className={styles.avatarImage}
+                            loading="eager"
                           />
                         </div>
 
@@ -172,35 +169,31 @@ export default function Hero() {
 
                         {/* Developer Identity */}
                         <h3 className={styles.profileName}>Raj Kamal Mehta</h3>
-                        <p className={styles.profileTitle}>React Native & Full Stack Engineer</p>
+                        <p className={styles.profileTitle}>Mobile App Developer</p>
                         <div className={styles.profileLocation}>
                           <MapPin size={11} />
                           <span>Raipur, India</span>
                         </div>
 
-                        {/* Verified Focus Cards */}
+                        {/* Highlight 1: Mobile App Development */}
                         <div className={styles.profileCard}>
                           <div className={styles.profileCardHeader}>
-                            <span className={styles.cardHeaderDot} />
-                            <span className={styles.cardHeaderTitle}>Core Stack</span>
-                          </div>
-                          <div className={styles.profileTechGrid}>
-                            <span className={styles.techTag}>React Native</span>
-                            <span className={styles.techTag}>TypeScript</span>
-                            <span className={styles.techTag}>FastAPI</span>
-                            <span className={styles.techTag}>Python</span>
-                            <span className={styles.techTag}>PostgreSQL</span>
-                            <span className={styles.techTag}>Node.js</span>
-                          </div>
-                        </div>
-
-                        <div className={styles.profileCard}>
-                          <div className={styles.profileCardHeader}>
-                            <CheckCircle2 size={11} color="var(--accent)" />
-                            <span className={styles.cardHeaderTitle}>Hands-on Experience</span>
+                            <Smartphone size={13} className={styles.cardHeaderIconAccent} />
+                            <span className={styles.cardHeaderTitle}>Mobile App Development</span>
                           </div>
                           <p className={styles.cardText}>
-                            2 Industry Internships • IEEE Co-Authored • Production Mobile Apps
+                            Production React Native apps with offline sync, native bridges & scalable architecture.
+                          </p>
+                        </div>
+
+                        {/* Highlight 2: Published Research */}
+                        <div className={styles.profileCard}>
+                          <div className={styles.profileCardHeader}>
+                            <Award size={13} className={styles.cardHeaderIconGreen} />
+                            <span className={styles.cardHeaderTitle}>Published Research</span>
+                          </div>
+                          <p className={styles.cardText}>
+                            IEEE-supported research on cardiovascular PPG signal quality assessment & clinical DSP.
                           </p>
                         </div>
                       </motion.div>
