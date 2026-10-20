@@ -27,6 +27,7 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--accent);
+  font-weight: 600;
   letter-spacing: 0.05em;
   margin-bottom: var(--space-6);
   display: flex;
@@ -114,6 +115,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+  margin-top: -30px;
 }
 
 .phoneWrapper {
@@ -121,39 +123,11 @@
   perspective: 1200px;
 }
 
-/* Subtle floating badge (Concept 3 touch - top only) */
-.floatingBadge {
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
-  background: rgba(13, 21, 38, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-full);
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--primary);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.badgeTopLeft {
-  top: 14px;
-  left: -28px;
-  animation: float 5s ease-in-out infinite;
-}
-
-.badgeIcon {
-  color: var(--accent);
-}
-
-/* Phone Device Frame */
+/* Phone Device Frame (with dedicated high-contrast phone tokens) */
 .phone {
+  --phone-text-main: #FFFFFF;
+  --phone-text-sub: #CBD5E1;
+  --phone-text-muted: #94A3B8;
   position: relative;
   width: 290px;
   height: 580px;
@@ -212,7 +186,7 @@
   align-items: center;
   z-index: 9;
   font-size: 10px;
-  color: var(--secondary);
+  color: var(--phone-text-sub);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
@@ -227,13 +201,13 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--secondary);
+  background: var(--phone-text-sub);
 }
 
 .statusBattery {
   width: 14px;
   height: 7px;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--phone-text-sub);
   border-radius: 2px;
   position: relative;
   display: flex;
@@ -246,7 +220,7 @@
   display: block;
   width: 8px;
   height: 3px;
-  background: var(--secondary);
+  background: var(--phone-text-sub);
   border-radius: 1px;
 }
 
@@ -342,7 +316,7 @@
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--phone-text-main);
   margin: 0 0 2px;
   text-align: center;
   letter-spacing: -0.01em;
@@ -350,7 +324,7 @@
 
 .profileTitle {
   font-size: 10.5px;
-  color: var(--accent);
+  color: #818CF8;
   font-weight: 600;
   margin: 0 0 10px;
   text-align: center;
@@ -360,8 +334,8 @@
 
 .profileCard {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 12px;
   padding: 9px 12px;
   margin-bottom: 7px;
@@ -392,7 +366,7 @@
 .cardHeaderTitle {
   font-size: 10px;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--phone-text-main);
   letter-spacing: 0.02em;
 }
 
@@ -406,15 +380,15 @@
   font-size: 8.5px;
   padding: 3px 8px;
   border-radius: 6px;
-  background: rgba(79, 70, 229, 0.14);
+  background: rgba(79, 70, 229, 0.18);
   color: #C7D2FE;
-  border: 1px solid rgba(79, 70, 229, 0.28);
+  border: 1px solid rgba(79, 70, 229, 0.32);
   font-weight: 500;
 }
 
 .cardText {
   font-size: 9.5px;
-  color: var(--secondary);
+  color: var(--phone-text-sub);
   line-height: 1.48;
   margin: 0;
 }
@@ -424,21 +398,21 @@
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--phone-text-main);
   margin-top: 4px;
   margin-bottom: 2px;
 }
 
 .phoneAppTag {
   font-size: 9.5px;
-  color: var(--secondary);
+  color: var(--phone-text-sub);
   margin-bottom: 12px;
 }
 
 .phoneCard {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 12px;
   padding: 12px;
   margin-bottom: 8px;
@@ -448,7 +422,7 @@
 .phoneCardTitle {
   font-size: 10px;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--phone-text-main);
   margin-bottom: 6px;
 }
 
@@ -468,7 +442,7 @@
 
 .phoneScoreLabel {
   font-size: 9.5px;
-  color: var(--tertiary);
+  color: var(--phone-text-muted);
 }
 
 .phoneBar {
@@ -497,9 +471,9 @@
   font-size: 8.5px;
   padding: 3px 8px;
   border-radius: var(--radius-full);
-  background: rgba(79, 70, 229, 0.15);
-  color: var(--accent);
-  border: 1px solid rgba(79, 70, 229, 0.25);
+  background: rgba(79, 70, 229, 0.18);
+  color: #C7D2FE;
+  border: 1px solid rgba(79, 70, 229, 0.32);
   font-weight: 500;
 }
 
@@ -507,9 +481,9 @@
   font-size: 8.5px;
   padding: 3px 8px;
   border-radius: var(--radius-full);
-  background: rgba(244, 63, 94, 0.12);
+  background: rgba(244, 63, 94, 0.14);
   color: #FDA4AF;
-  border: 1px solid rgba(244, 63, 94, 0.25);
+  border: 1px solid rgba(244, 63, 94, 0.3);
   font-weight: 500;
 }
 
@@ -556,11 +530,11 @@
 }
 
 .dspLabel {
-  color: var(--tertiary);
+  color: var(--phone-text-muted);
 }
 
 .dspVal {
-  color: var(--primary);
+  color: var(--phone-text-main);
   font-weight: 500;
 }
 
@@ -598,33 +572,33 @@
   padding: 4px 2px;
   border-radius: 8px;
   cursor: pointer;
-  color: var(--tertiary);
+  color: var(--phone-text-muted);
   font-size: 9px;
   font-weight: 500;
   transition: all 0.2s var(--ease-out);
 }
 
 .navTab:hover {
-  color: var(--primary);
-  background: rgba(255, 255, 255, 0.04);
+  color: var(--phone-text-main);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .navTabActive {
   color: #818CF8;
   font-weight: 600;
-  background: rgba(79, 70, 229, 0.16);
+  background: rgba(79, 70, 229, 0.2);
 }
 
 .navTabActiveGreen {
   color: #4ADE80;
   font-weight: 600;
-  background: rgba(34, 197, 94, 0.16);
+  background: rgba(34, 197, 94, 0.2);
 }
 
 .navTabActiveRed {
   color: #FB7185;
   font-weight: 600;
-  background: rgba(244, 63, 94, 0.16);
+  background: rgba(244, 63, 94, 0.2);
 }
 
 /* Floating glow behind phone */
@@ -721,6 +695,24 @@
   background: linear-gradient(to bottom, var(--accent), transparent);
 }
 
+/* Light Mode Specific Enhancements */
+:global([data-theme="light"]) .phone {
+  border: 2px solid rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 20px 50px rgba(15, 23, 42, 0.16),
+    0 0 60px rgba(79, 70, 229, 0.12);
+}
+
+:global([data-theme="light"]) .phoneGlow {
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+}
+
+:global([data-theme="light"]) .heroLabel {
+  color: #4F46E5;
+  font-weight: 600;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .heroInner {
@@ -743,6 +735,7 @@
 
   .heroVisual {
     order: -1;
+    margin-top: 0;
   }
 
   .phone {
@@ -753,10 +746,6 @@
 
   .phone:hover {
     transform: none !important;
-  }
-
-  .floatingBadge {
-    display: none;
   }
 }
 
@@ -776,10 +765,6 @@
 
   .phone:hover {
     transform: none !important;
-  }
-
-  .floatingBadge {
-    display: none;
   }
 
   .heroCtas {

@@ -25,12 +25,13 @@
 /* Primary (filled accent) */
 .primary {
   background: var(--accent);
-  color: var(--primary);
+  color: #ffffff;
   border: 1px solid var(--accent);
 }
 
 .primary:hover {
   background: var(--accent-hover);
+  color: #ffffff;
   box-shadow: var(--shadow-accent);
 }
 

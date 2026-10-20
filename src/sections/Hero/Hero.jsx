@@ -116,12 +116,6 @@ export default function Hero() {
             <div className={`${styles.floatingOrb} ${styles.orb2}`} />
             <div className={`${styles.floatingOrb} ${styles.orb3}`} />
 
-            {/* Subtle floating badge (Concept 3 touch - top only, non-competing) */}
-            <div className={`${styles.floatingBadge} ${styles.badgeTopLeft}`}>
-              <Sparkles size={12} className={styles.badgeIcon} />
-              <span>Mobile & Full Stack</span>
-            </div>
-
             <div className={styles.phone}>
               <div className={styles.phoneNotch} />
               
@@ -181,9 +175,9 @@ export default function Hero() {
                             <span className={styles.techTag}>React Native</span>
                             <span className={styles.techTag}>React.js</span>
                             <span className={styles.techTag}>MERN Stack</span>
+                            <span className={styles.techTag}>JavaScript</span>
+                            <span className={styles.techTag}>AI</span>
                             <span className={styles.techTag}>Node.js</span>
-                            <span className={styles.techTag}>FastAPI</span>
-                            <span className={styles.techTag}>TypeScript</span>
                           </div>
                         </div>
 
