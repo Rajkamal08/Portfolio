@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, ArrowDown, Eye, Download, Send, User, Sprout, Activity, Heart, Sparkles, MapPin, CheckCircle2, Smartphone, Award } from 'lucide-react';
+import { Mail, ArrowDown, Eye, Download, Send, User, Sprout, Activity, Heart, Sparkles, MapPin, CheckCircle2, Smartphone, Award, Layers } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../../components/Icons';
 import MagneticButton from '../../components/MagneticButton/MagneticButton';
 import { personalInfo } from '../../constants/data';
@@ -144,17 +144,17 @@ export default function Hero() {
                     {activeTab === 'profile' && (
                       <motion.div
                         key="profile"
-                        className={styles.tabContent}
+                        className={`${styles.tabContent} ${styles.tabContentProfile}`}
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -8 }}
                         transition={{ duration: 0.22 }}
                       >
-                        {/* High-Resolution Profile Avatar (110px) */}
+                        {/* Large Avatar Circle (Unzoomed original photo) */}
                         <div className={styles.avatarContainer}>
                           <div className={styles.avatarGlowRing} />
                           <img
-                            src="/projects/raj_profile_hd.png"
+                            src="/projects/RAJ_PHOTO.png"
                             alt="Raj Kamal Mehta"
                             className={styles.avatarImage}
                             loading="eager"
@@ -169,31 +169,32 @@ export default function Hero() {
 
                         {/* Developer Identity */}
                         <h3 className={styles.profileName}>Raj Kamal Mehta</h3>
-                        <p className={styles.profileTitle}>Mobile App Developer</p>
-                        <div className={styles.profileLocation}>
-                          <MapPin size={11} />
-                          <span>Raipur, India</span>
-                        </div>
+                        <p className={styles.profileTitle}>Mobile App Developer & Full Stack Developer</p>
 
-                        {/* Highlight 1: Mobile App Development */}
+                        {/* Tech Stack Card */}
                         <div className={styles.profileCard}>
                           <div className={styles.profileCardHeader}>
-                            <Smartphone size={13} className={styles.cardHeaderIconAccent} />
-                            <span className={styles.cardHeaderTitle}>Mobile App Development</span>
+                            <Layers size={13} className={styles.cardHeaderIconAccent} />
+                            <span className={styles.cardHeaderTitle}>Tech Stack</span>
                           </div>
-                          <p className={styles.cardText}>
-                            Production React Native apps with offline sync, native bridges & scalable architecture.
-                          </p>
+                          <div className={styles.profileTechGrid}>
+                            <span className={styles.techTag}>React Native</span>
+                            <span className={styles.techTag}>React.js</span>
+                            <span className={styles.techTag}>MERN Stack</span>
+                            <span className={styles.techTag}>Node.js</span>
+                            <span className={styles.techTag}>FastAPI</span>
+                            <span className={styles.techTag}>TypeScript</span>
+                          </div>
                         </div>
 
-                        {/* Highlight 2: Published Research */}
+                        {/* Research & Contributions Card */}
                         <div className={styles.profileCard}>
                           <div className={styles.profileCardHeader}>
                             <Award size={13} className={styles.cardHeaderIconGreen} />
-                            <span className={styles.cardHeaderTitle}>Published Research</span>
+                            <span className={styles.cardHeaderTitle}>Research & Contributions</span>
                           </div>
                           <p className={styles.cardText}>
-                            IEEE-supported research on cardiovascular PPG signal quality assessment & clinical DSP.
+                            IEEE-published researcher with production mobile apps and active open-source GitHub contributions.
                           </p>
                         </div>
                       </motion.div>
