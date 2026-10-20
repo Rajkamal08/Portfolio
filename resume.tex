@@ -26,12 +26,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins - ULTRA SQUEEZED
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.6in}
-\addtolength{\textwidth}{1.2in}
-\addtolength{\topmargin}{-0.85in}
-\addtolength{\textheight}{1.7in}
+% Adjust margins - Balanced 1-page layout
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.55in}
+\addtolength{\textheight}{1.1in}
 
 \urlstyle{same}
 \raggedbottom
@@ -40,8 +40,8 @@
 
 % Sections formatting (Small Caps, Left Aligned, Line Underneath)
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{3pt}]
 
 \pdfgentounicode=1
 
@@ -49,40 +49,40 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{1.5pt}}
   }
 }
 
 % 2-argument subheading for Experience
 \newcommand{\resumeSubheading}[2]{
-  \vspace{-2pt}\item
+  \vspace{3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
 % 4-argument subheading for Education
 \newcommand{\resumeEduHeading}[4]{
-  \vspace{-2pt}\item
+  \vspace{3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{1pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+    \vspace{3pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
 %-------------------------------------------
 \begin{document}
@@ -150,7 +150,7 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeEduHeading
-      {Krishna Vikas Institute of Technology , Raipur}{2022 -- 2026}
+      {Krishna Vikas Institute of Technology, Raipur}{2022 -- 2026}
       {B.Tech, Computer Science and Engineering}{CGPA: 8.3/10}
   \resumeSubHeadingListEnd
 
@@ -159,6 +159,7 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
+     \renewcommand{\arraystretch}{1.18}
      \begin{tabular}{@{}l @{\hspace{0.2in}} l}
        \textbf{Languages}  & JavaScript, TypeScript, Python, C \\
        \textbf{Frontend}   & React.js, Redux, HTML5, CSS3, Tailwind CSS \\
@@ -173,7 +174,7 @@
 
 %-----------ACHIEVEMENTS-----------
 \section{Achievements}
-  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=-2pt]
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2.5pt]
     \small{
       \item \textbf{Publication:} Raj Kamal Mehta et al., ``\textbf{PPG Signal Quality Assessment \& Artifact Detection for Smartphone Monitoring},'' \textit{TechRxiv (IEEE-supported preprint)}, 2025.
       \item \textbf{Certificate:} Artificial Intelligence \& Machine Learning Training, \textit{Infosys Springboard} (2024)
